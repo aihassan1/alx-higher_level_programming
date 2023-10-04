@@ -7,4 +7,4 @@ for i in range(0, 9):
             break
 
         if i != j and i < j:
-            print("{}, ".format(i * 10 + j), end='')
+            print("{:02}, ".format(i * 10 + j), end='')
