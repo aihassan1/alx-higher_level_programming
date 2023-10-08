@@ -7,4 +7,4 @@ if __name__ == "__main__":
 
     filtered_names = [name for name in names if not name.startswith('__')]
     sorted_names = sorted(filtered_names)
-    print(filtered_names)
+    print(sorted_names)
