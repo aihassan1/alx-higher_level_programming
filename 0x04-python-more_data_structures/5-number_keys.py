@@ -4,4 +4,4 @@
 def number_keys(a_dictionary):
 
     keys = len(a_dictionary.keys())
-    print(keys)
+    return(keys)
