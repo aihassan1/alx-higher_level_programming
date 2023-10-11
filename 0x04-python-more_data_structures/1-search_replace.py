@@ -9,4 +9,4 @@ def search_replace(my_list, search, replace):
         if copy_list[i] == search:
             copy_list[i] = replace
 
-            return copy_list
+    return copy_list
