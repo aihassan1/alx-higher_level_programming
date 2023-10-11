@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+
+
+def uniq_add(my_list=[]):
+    uniqe = set(my_list)
+    adddtion_list = list(uniqe)
+
+    result = 0
+    for i in range(len(adddtion_list)):
+        result += adddtion_list[i]
+    return result
