@@ -11,7 +11,7 @@ def roman_to_int(roman_string):
 
         number = roman.get(roman_num_list[i])
         if number is None:
-            return 0
+            return None
 
         if i < len(roman_num_list) - 1:
             next_num = roman.get(roman_num_list[i + 1])
