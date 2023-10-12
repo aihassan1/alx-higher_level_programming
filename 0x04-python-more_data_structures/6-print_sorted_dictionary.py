@@ -2,6 +2,7 @@
 
 
 def print_sorted_dictionary(a_dictionary):
-    output = sorted(a_dictionary.items(), key=lambda item: item[0].lower())
-    for key, value in output:
-        print(f"{key}: {value}")
+    sorted_keys = sorted(a_dictionary.keys(), key=lambda key: key.lower())
+
+    for key in sorted_keys:
+        print(f"{key}: {a_dictionary[key]}")
