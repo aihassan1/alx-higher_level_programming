@@ -15,4 +15,4 @@ def safe_print_division(a, b):
         else:
             result = a / b
 
-        print("Inside result: {} ".format(result))
+        print("Inside result: {}".format(result))
