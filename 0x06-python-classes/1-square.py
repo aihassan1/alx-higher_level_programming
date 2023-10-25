@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-"""
-This is a class that defines a square.
 
-Attributes:
-__size (int): The size of the square.
-"""
+
+"""square mod"""
 
 
 class Square:
+    """defines a square"""
 
     def __init__(self, size=0):
         """
