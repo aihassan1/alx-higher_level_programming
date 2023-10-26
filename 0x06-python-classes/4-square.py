@@ -51,12 +51,12 @@ class Square:
         else:
             raise TypeError("size must be an integer")
 
-        def area(self):
-            """
-            Calculates the area of the square.
-
-            Returns:
-            int: The area of the square.
-
-            """
-            return self.__size * self.__size
+    def area(self):
+        """
+        Calculates the area of the square.
+        
+        Returns:
+        int: The area of the square.
+        
+        """
+        return self.__size * self.__size
