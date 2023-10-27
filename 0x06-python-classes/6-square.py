@@ -81,10 +81,10 @@ class Square:
     def my_print(self):
         """prints a square of # based on size """
         if self.__size != 0:
-            for q in range(self.__position[1]):
+            for q in range(self.position[1]):
                 print()
             for i in range(self.size):
-                for z in range(self.__position[0]):
+                for z in range(self.position[0]):
                     print(" ", end='')
                 for j in range(self.size):
                     print("#", end='')
