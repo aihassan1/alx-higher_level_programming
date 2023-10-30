@@ -5,4 +5,3 @@
 class Rectangle:
     """creates a rec"""
     pass
-a
