@@ -1,0 +1,100 @@
+the ''add_integer '' module
+================================================
+using ''add interger''
+------------------------------------------------
+
+import the function from the module 
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Test(1) 2 ints:
+
+>>> add_integer(2, 98)
+100
+
+Test(2) 1 int:
+
+>>> add_integer(0)
+98
+
+Test(3) 1 int:
+
+>>> add_integer(0)
+98
+
+test(4) -int:
+
+>>> add_integer(-2)
+96
+
+test(5) (-int, -int):
+
+>>> add_integer(-2, -4)
+-6
+
+test(6) (0, -int):
+
+>>> add_integer(0, -4)
+-4
+
+test(7) (float, float):
+
+>>> add_integer(2.5, 2.5)
+4
+
+test(7) (float, int):
+
+>>> add_integer(2.5, 2)
+4
+
+test(7) (-float, float):
+
+>>> add_integer(-2.5, 2.5)
+0
+
+test(7) (string):
+
+>>> add_integer('str')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+test(8) (string, string):
+
+>>> add_integer('str')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+test(9) (int, string):
+
+>>> add_integer(5,'str')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+test(10) (None):
+
+>>> add_integer('str')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+test(11) ([list]):
+
+>>> add_integer([5],[3])
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+test(12)
+>>> add_integer(1000000, 2000000)
+3000000
+
+test(13)
+>>> add_integer(1.000000, 2.000000)
+3
+
+test(14)
+>>> add_integer(-1.000000, 2.000000)
+1

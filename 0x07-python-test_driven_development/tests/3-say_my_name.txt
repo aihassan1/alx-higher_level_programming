@@ -1,0 +1,38 @@
+the ''2. Say my name '' module test
+================================================
+using ''say_my_name'' and testing it
+------------------------------------------------
+importing the function:
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+test (1) using regular names:
+
+>>> say_my_name("John", "Smith")
+My name is John Smith
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+
+test (2) wrong type test in first name:
+
+>>> say_my_name(12, "White")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+
+test (3) wrong type test in last name:
+
+>>> say_my_name("adam", 12)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+
+test (4) wrong type test in first and last name:
+
+>>> say_my_name(11, 12)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
