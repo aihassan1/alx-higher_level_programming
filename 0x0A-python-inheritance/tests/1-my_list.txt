@@ -92,3 +92,12 @@ test 7: same number
 >>> my_list2.print_sorted()
 [1, 1, 1, 1]
 >>>
+
+test 8: parent object
+
+>>> my_list = [1, 2, 3]
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'print_sorted'
+>>>
