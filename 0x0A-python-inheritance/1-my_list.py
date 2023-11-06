@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 provides a custom list class that allows sorting and printing of lists.
 """
@@ -7,7 +6,7 @@ provides a custom list class that allows sorting and printing of lists.
 
 class MyList(list):
     """
-    A custom list class that inherits from the built-in list class.
+    A custom list class that inherits the built-in list class.
     """
 
     def print_sorted(self):
