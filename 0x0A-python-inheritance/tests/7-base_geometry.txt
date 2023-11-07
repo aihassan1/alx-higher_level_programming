@@ -127,3 +127,11 @@ Passing None to method
 Traceback (most recent call last):
           ...
 TypeError: age must be an integer
+
+
+Passing one argument to integer_validator
+
+>>> bg.integer_validator("man")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: integer_validator() missing 1 required positional argument: 'value'
