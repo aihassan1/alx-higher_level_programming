@@ -5,7 +5,7 @@ case 0: import
 >>> MyList = __import__('1-my_list').MyList
 >>>
 -------------------------------------------
-    
+
 test 1 normal numbers:
 
 >>> class MyList(list):
@@ -14,7 +14,7 @@ test 1 normal numbers:
 ...         print(sorted_list)
 ... 
 >>> my_list = MyList()
->>> my_list.append(1)
+>>> my_list.append(1)    
 >>> my_list.append(4)
 >>> my_list.append(2)
 >>> my_list.append(3)
@@ -25,6 +25,7 @@ test 1 normal numbers:
 [1, 2, 3, 4, 5]
 >>> print(my_list)
 [1, 4, 2, 3, 5]
+>>>
 
 
 
@@ -38,6 +39,7 @@ test2 0 ele:
 >>> new_list = MyList()
 >>> new_list.print_sorted()
 []
+>>>
 
 
 test 3 one ele:
@@ -51,7 +53,7 @@ test 3 one ele:
 >>> x_list.append(1)
 >>> x_list.print_sorted()
 [1]
-
+>>>
 
 
 
@@ -63,6 +65,8 @@ TEST 4 NEGATIVE NUMBERS:
 >>> my_list.append(-3)
 >>> my_list.print_sorted()
 [-5, -3, -1, 0]
+>>>
+
 
 
 test 5: passed a list
