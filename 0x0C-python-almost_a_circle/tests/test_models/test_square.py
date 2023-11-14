@@ -38,6 +38,9 @@ class TestSquareCase(unittest.TestCase):
             square_a = Square(3, -3, 4)
 
         with self.assertRaises(ValueError):
+            square_a = Square(0, -3, 4)
+            
+        with self.assertRaises(ValueError):
             square_b = Square(6, 3, -4)
 
     def test_check_type(self):
@@ -59,9 +62,6 @@ class TestSquareCase(unittest.TestCase):
     def test_area(self):
         square = Square(5)
         self.assertEqual(square.area(), 25)
-
-        square = Square(0)
-        self.assertEqual(square.area(), 0)
 
         with self.assertRaises(TypeError):
             square = Square('s')

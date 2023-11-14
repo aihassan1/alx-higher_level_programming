@@ -21,8 +21,9 @@ class Rectangle(Base):
         # check for positve nums only
         Rectangle.check_positive("width", width)
         Rectangle.check_positive("height", height)
-        Rectangle.check_positive("x", x)
-        Rectangle.check_positive("y", y)
+        if x < 0 or y < 0:    
+            Rectangle.check_positive("x", x)
+            Rectangle.check_positive("y", y)
 
         self.__width = width
         self.__height = height

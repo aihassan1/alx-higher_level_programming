@@ -36,6 +36,12 @@ class TestRectangleClass(unittest.TestCase):
             rec_9 = Rectangle(1, -2)
 
         with self.assertRaises(ValueError):
+            rec_9 = Rectangle(0, -2)
+
+        with self.assertRaises(ValueError):
+            rec_9 = Rectangle(1, 0)
+
+        with self.assertRaises(ValueError):
             rec = Rectangle(-1, 2)
 
         with self.assertRaises(ValueError):
@@ -63,12 +69,6 @@ class TestRectangleClass(unittest.TestCase):
     def test_area(self):
         rec = Rectangle(5, 6)
         self.assertEqual(rec.area(), 30)
-
-        rec = Rectangle(5, 0)
-        self.assertEqual(rec.area(), 0)
-
-        rec = Rectangle(0, 6)
-        self.assertEqual(rec.area(), 0)
 
         rec = Rectangle(5, 6, 3, 4, 12)
         self.assertEqual(rec.area(), 30)
