@@ -39,7 +39,7 @@ class TestSquareCase(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             square_a = Square(0, -3, 4)
-            
+
         with self.assertRaises(ValueError):
             square_b = Square(6, 3, -4)
 

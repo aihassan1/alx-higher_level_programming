@@ -1,39 +1,41 @@
 #!/usr/bin/python3
-"""this is the module doc"""
+"""Module for the Square class."""
+
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """Represents a square, inherits from Rectangle."""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """class constructor"""
+        """Initialize a Square instance."""
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """ returns [Square] (<id>) <x>/<y> - <width>/<height>"""
-        return ("[Square] ({}) {}/{} - {}").format(self.id, self.x, self.y,
-                                                   self.width)
+        """Return a string representation of the Square."""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
 
     @property
     def size(self):
-        """size getter"""
-        return self.height
+        """Getter method for the size attribute."""
+        return self.width
 
     @size.setter
     def size(self, value):
-        """size setter"""
+        """Setter method for the size attribute."""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
-        """assigns an argument to each attribute order (id, size, x, y)"""
-        list = ['id', 'size', 'x', 'y']
+        """Assigns arguments to each attribute in order (id, size, x, y)."""
+        attribute_list = ['id', 'size', 'x', 'y']
 
         if args:
             for i in range(len(args)):
-                setattr(self, list[i], args[i])
+                setattr(self, attribute_list[i], args[i])
 
         elif kwargs:
             for key, value in kwargs.items():
-                getattr(self, key)
-                setattr(self, key, value)
+                if hasattr(self, key):
+                    setattr(self, key, value)
