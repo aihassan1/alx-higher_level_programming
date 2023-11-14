@@ -89,7 +89,7 @@ class Rectangle(Base):
     @staticmethod
     def check_positive(attr_name, value):
         """ Checks if the value is > 0 for the given attribute."""
-        if value < 0:
+        if value <= 0:
             raise ValueError("{} must be > 0".format(attr_name))
 
     def area(self):
