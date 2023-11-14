@@ -5,6 +5,7 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """Represents a square, inherits from Rectangle."""
+
     def __init__(self, size, x=0, y=0, id=None):
         """class constructor"""
         super().__init__(size, size, x, y, id)
@@ -37,4 +38,3 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 getattr(self, key)
                 setattr(self, key, value)
-
