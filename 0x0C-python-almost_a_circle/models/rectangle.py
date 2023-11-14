@@ -21,9 +21,9 @@ class Rectangle(Base):
         # check for positve nums only
         Rectangle.check_positive("width", width)
         Rectangle.check_positive("height", height)
-        if x < 0 or y < 0:
-            Rectangle.check_positive("x", x)
-            Rectangle.check_positive("y", y)
+
+        Rectangle.check_positive_cordintations("x", x)
+        Rectangle.check_positive_cordintations("y", y)
 
         self.__width = width
         self.__height = height
@@ -65,7 +65,7 @@ class Rectangle(Base):
     def x(self, x_value):
         """Setter method for the x attribute."""
         Rectangle.check_int("x", x_value)
-        Rectangle.check_positive("x", x_value)
+        Rectangle.check_positive_cordintations("x", x_value)
         self.__x = x_value
 
     @property
@@ -77,7 +77,7 @@ class Rectangle(Base):
     def y(self, y_value):
         """Setter method for the y attribute."""
         Rectangle.check_int("y", y_value)
-        Rectangle.check_positive("y", y_value)
+        Rectangle.check_positive_cordintations("y", y_value)
         self.__y = y_value
 
     @staticmethod
@@ -92,6 +92,12 @@ class Rectangle(Base):
         """ Checks if the value is > 0 for the given attribute."""
         if value <= 0:
             raise ValueError("{} must be > 0".format(attr_name))
+
+    @staticmethod
+    def check_positive_cordintations(attr_name, value):
+        """ Checks if the value is > 0 for the given attribute."""
+        if value < 0:
+            raise ValueError("{} must be >= 0".format(attr_name))
 
     def area(self):
         """calculates the area of the rectangle"""

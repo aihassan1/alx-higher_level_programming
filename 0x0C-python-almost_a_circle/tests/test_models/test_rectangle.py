@@ -31,6 +31,13 @@ class TestRectangleClass(unittest.TestCase):
         self.assertEqual(rec8.width, 10)
         self.assertEqual(rec8.height, 15)
 
+        with self.assertRaises(ValueError):
+            rec8.x = -112
+
+        with self.assertRaises(ValueError):
+            rec8.y = -1
+        
+    
     def test_check_for_positve(self):
         with self.assertRaises(ValueError):
             rec_9 = Rectangle(1, -2)
