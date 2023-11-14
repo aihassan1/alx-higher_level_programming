@@ -109,6 +109,12 @@ class TestSquareCase(unittest.TestCase):
         with self.assertRaises(AttributeError):
             square.update(FAKE=12)
 
+    def test_to_dictionary(self):
+        s = Square(10, 2, 1, 1)
+        s_dict = s.to_dictionary()
+        expected_dict = {'id': 1, 'x': 2, 'size': 10, 'y': 1}
+        self.assertEqual(s_dict, expected_dict)
+
 
 if __name__ == '__main__':
     unittest.main()
