@@ -2,6 +2,7 @@
 
 -- Each record should display: cities.id - cities.name - states.name
 
-SELECT id , name FROM cities 
+SELECT cities.id AS city_id , cities.name AS city_name, states.name AS state_name
+FROM cities 
 LEFT JOIN states
 ON cities.state_id = states.id;
