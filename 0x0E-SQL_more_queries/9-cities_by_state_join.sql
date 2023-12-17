@@ -4,4 +4,4 @@
 
 SELECT id , name FROM cities 
 LEFT JOIN states
-ON cities.state_id = states.id
+ON cities.state_id = states.id;
