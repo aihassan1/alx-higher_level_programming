@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// a
+// prints a square of size x
 
 let i, j;
 const firstArg = process.argv[2];
