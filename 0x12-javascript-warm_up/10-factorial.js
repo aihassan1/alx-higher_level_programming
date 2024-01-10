@@ -4,14 +4,18 @@ function factorial (n) {
   if (n === 0 || n === 1) {
     return 1;
   } else {
-    return (n * factorial(n - 1));
+    return n * factorial(n - 1);
   }
 }
 
-const firstNum = Number(process.argv[2]);
-if (firstNum.isNaN) {
-  console.log('NAN');
+if (process.argv[2]) {
+  const firstNum = Number(process.argv[2]);
+  if (firstNum.isNaN) {
+    console.log('NAN');
+  } else {
+    const result = factorial(firstNum);
+    console.log(`${result}`);
+  }
 } else {
-  const result = factorial(firstNum);
-  console.log(`${result}`);
+  console.log(1);
 }
