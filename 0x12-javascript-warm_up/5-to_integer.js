@@ -1,11 +1,10 @@
 #!/usr/bin/node
-let first_arg = process.argv[2];
 
-let number = parseInt(first_arg, 10);
+// script that prints My number: <first argument converted in integer>
 
-// Check if the string is enclosed in single or double quotes
-
-if (isNaN(number) || number.toString() != first_arg) {
+const firstArg = process.argv[2];
+const number = parseInt(firstArg, 10);
+if (isNaN(number)) {
   console.log('Not a number');
 } else {
   console.log(`My number: ${number}`);
