@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     # Execute SQL query to select states starting with 'N'
     cursor.execute(
-        "SELECT * FROM states " "WHERE name LIKE 'N%' "
+        "SELECT * FROM states " "WHERE UPPER(name) LIKE 'N%' "
         "ORDER BY states.id ASC"
     )
 
