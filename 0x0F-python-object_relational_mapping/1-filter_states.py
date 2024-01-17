@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""document the file 1-filter_states.py"""
 # Lists all states with a name starting with N from the database hbtn_0e_0_usa.
 # Usage: ./1-filter_states.py <mysql username> \
 #                             <mysql password> \
@@ -14,7 +15,7 @@ password = sys.argv[2]
 database_name = sys.argv[3]
 
 if __name__ == "__main__":
-    """ Ensure code is not executed when imported"""
+    """Ensure code is not executed when imported"""
     # Connect to the MySQL database
     db = MySQLdb.connect(host="localhost", user=username, db=database_name)
     cursor = db.cursor()
