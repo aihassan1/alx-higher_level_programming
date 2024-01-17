@@ -1,11 +1,9 @@
 #!/usr/bin/python3
+"""1-filter states that starts with N"""
 import MySQLdb
 import sys
 
-"""
-Filter states : script that lists all states with a name starting with N
-(upper N) from the database hbtn_0e_0_usa
-"""
+
 username = sys.argv[1]
 password = sys.argv[2]
 database_name = sys.argv[3]
