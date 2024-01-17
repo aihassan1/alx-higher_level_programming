@@ -3,6 +3,7 @@
 # Usage: ./1-filter_states.py <mysql username> \
 #                             <mysql password> \
 #                             <database name>
+
 import MySQLdb
 import sys
 
@@ -13,7 +14,7 @@ password = sys.argv[2]
 database_name = sys.argv[3]
 
 if __name__ == "__main__":
-    """Ensure code is not executed when imported"""
+    """ Ensure code is not executed when imported"""
     # Connect to the MySQL database
     db = MySQLdb.connect(host="localhost", user=username, db=database_name)
     cursor = db.cursor()
