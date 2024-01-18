@@ -1,10 +1,6 @@
 #!/usr/bin/python3
-"""
-Module for the class definition of a State.
-
-This module defines a State class representing a table in a MySQL database.
-It uses SQLAlchemy for database interaction.
-"""
+# Defines a State model.
+# Inherits from SQLAlchemy Base and links to the MySQL table states.
 
 
 from sqlalchemy import create_engine, Column, Integer, VARCHAR
