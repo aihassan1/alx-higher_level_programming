@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" class definition of a State"""
+""" the module is for the class definition of a State """
 
 from sqlalchemy import create_engine, Column, String, CHAR, Integer, ForeignKey
 from sqlalchemy.orm import declarative_base, sessionmaker, relationship
@@ -10,7 +10,7 @@ Base = declarative_base()
 
 
 class State(Base):
-    """define the state class"""
+    """ define the state class """
     __tablename__ = "states"
     id = Column(
         "id", Integer, primary_key=True,
