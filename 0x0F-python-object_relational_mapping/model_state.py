@@ -1,26 +1,38 @@
 #!/usr/bin/python3
-""" the module is for the class definition of a State """
+"""Module for the class definition of a State."""
 
-from sqlalchemy import create_engine, Column, String, CHAR, Integer, ForeignKey
-from sqlalchemy.orm import declarative_base, sessionmaker, relationship
+from sqlalchemy import create_engine, Column, Integer, VARCHAR
+from sqlalchemy.orm import declarative_base, sessionmaker
 
+# Create a SQLAlchemy engine to connect to the MySQL database
 engine = create_engine(
     "mysql+mysqldb://root@localhost:3360/hbtn_0e_6_usa", echo=True)
+
+# Create a base class for declarative class definitions
 Base = declarative_base()
 
 
 class State(Base):
-    """ define the state class """
+    """Define the State class."""
     __tablename__ = "states"
     id = Column(
-        "id", Integer, primary_key=True,
-        autoincrement=True, nullable=False, unique=True
+        "id",
+        Integer,
+        primary_key=True,
+        autoincrement=True,
+        nullable=False,
+        unique=True
     )
-    name = Column("name", CHAR(128), nullable=False)
+    name = Column("name", VARCHAR(128), nullable=False)
 
 
+# Create the table in the MySQL database
 Base.metadata.create_all(bind=engine)
 
+
+# Create a session to interact with the database
 Session = sessionmaker(bind=engine)
 session = Session()
+
+# Close the session after using it
 session.close()
