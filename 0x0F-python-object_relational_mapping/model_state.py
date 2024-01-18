@@ -15,13 +15,11 @@ Base = declarative_base()
 
 
 class State(Base):
-    """
-    Define the State class.
+    """Represents a state for a MySQL database.
 
-    Attributes:
-    - id: An auto-incrementing, unique integer representing the primary key.
-    - name: A string with a maximum length of 128 characters,
-    representing the state name.
+    __tablename__ (str): The name of the MySQL table to store States.
+    id (sqlalchemy.Integer): The state's id.
+    name (sqlalchemy.String): The state's name.
     """
     __tablename__ = "states"
     id = Column(
