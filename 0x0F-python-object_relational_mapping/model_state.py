@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """
 Module for the class definition of a State.
+
+This module defines a State class representing a table in a MySQL database.
+It uses SQLAlchemy for database interaction.
 """
 
 
@@ -16,7 +19,14 @@ Base = declarative_base()
 
 
 class State(Base):
-    """Define the State class. and mention all the attr."""
+    """
+    Define the State class.
+
+    Attributes:
+    - id: An auto-incrementing, unique integer representing the primary key.
+    - name: A string with a maximum length of 128 characters,
+    representing the state name.
+    """
     __tablename__ = "states"
     id = Column(
         "id",
