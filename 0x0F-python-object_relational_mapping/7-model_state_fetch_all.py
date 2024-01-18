@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""script that lists all State objects from the database hbtn_0e_6_usa.
+"""
+script that lists all State objects from the database hbtn_0e_6_usa.
+Contains State class and Base, an instance of declarative_base()
 """
 
 import sys
