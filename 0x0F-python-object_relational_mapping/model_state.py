@@ -11,12 +11,13 @@ engine = create_engine(
     "mysql+mysqldb://root@localhost:3360/hbtn_0e_6_usa", echo=True)
 
 # Create a base class for declarative class definitions
-mymetadata = MetaData()
-Base = declarative_base(metadata=mymetadata)
+
+Base = declarative_base()
 
 
 class State(Base):
-    """Represents a state for a MySQL database.
+    """
+    Represents a state for a MySQL database.
 
     __tablename__ (str): The name of the MySQL table to store States.
     id (sqlalchemy.Integer): The state's id.
