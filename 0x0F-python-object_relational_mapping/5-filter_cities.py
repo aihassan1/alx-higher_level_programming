@@ -28,13 +28,11 @@ if __name__ == "__main__":
 
     cursor.execute(query, (state_name,))
 
-    # Fetch all rows and collect unique city names
-    cities = set(row[0] for row in cursor.fetchall())
+    # Fetch all rows and collect city names in a list
+    cities_list = [row[0] for row in cursor.fetchall()]
 
-    # Sort the city names alphabetically
-    sorted_cities = sorted(cities)
     # Print the result as a comma-separated string
-    print(", ".join(sorted_cities))
+    print(", ".join(cities_list))
 
     # Close the cursor and database connection
     cursor.close()
