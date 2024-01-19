@@ -7,10 +7,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-username = sys.argv[1]
-database = sys.argv[2]
-
 if __name__ == "__main__":
+    username = sys.argv[1]
+    database = sys.argv[2]
+
     engine = create_engine(
         "mysql+mysqldb://{}@localhost/{}".format(username, database),
         pool_pre_ping=True,
@@ -25,4 +25,3 @@ if __name__ == "__main__":
     for _state in stats_names:
         print("{}: {}".format(_state.id, _state.name))
 
-    session.close()
