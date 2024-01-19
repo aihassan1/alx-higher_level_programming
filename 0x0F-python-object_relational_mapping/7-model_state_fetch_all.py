@@ -24,4 +24,3 @@ if __name__ == "__main__":
 
     for _state in stats_names:
         print("{}: {}".format(_state.id, _state.name))
-
