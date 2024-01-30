@@ -10,8 +10,9 @@ Arguments:
 import requests
 import sys
 
-url = sys.argv[1]
+if __name__ == "__main__":
+    url = sys.argv[1]
 
-response = requests.get(url=url)
-header = response.headers["X-Request-Id"]
-print(header)
+    response = requests.get(url=url)
+    header = response.headers["X-Request-Id"]
+    print(header)
