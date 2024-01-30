@@ -8,17 +8,19 @@ import sys
 import urllib.request
 import urllib.parse
 
-# URL and data to be sent in the POST request
-url = sys.argv[1]
-email_arg = sys.argv[2]
+if __name__ == "__main__":
+    # URL and data to be sent in the POST request
+    url = sys.argv[1]
+    email_arg = sys.argv[2]
 
-email = urllib.parse.urlencode({"email": email_arg})
-email = email.encode("utf-8")
+    value = {"email": email_arg}
+    email = urllib.parse.urlencode(value)
+    email = email.encode("utf-8")
 
-# Create a POST request object
-request = urllib.request.Request(url=url, data=email, method="POST")
+    # Create a POST request object
+    request = urllib.request.Request(url=url, data=email)
 
-# send the request and get the response
-with urllib.request.urlopen(request) as response:
-    body = response.read().decode("utf-8")
-    print(body)
+    # send the request and get the response
+    with urllib.request.urlopen(request) as response:
+        body = response.read().decode("utf-8")
+        print(body)
