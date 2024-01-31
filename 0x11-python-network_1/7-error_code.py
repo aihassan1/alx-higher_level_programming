@@ -9,10 +9,9 @@ if __name__ == "__main__":
     # Retrieve the URL from the command-line arguments
     url = sys.argv[1]
 
-    try:
-        r = requests.get(url)
-        r.raise_for_status()  # Raise an error for HTTP errors (status code >= 400)
-        print(r.text)
+    r = requests.get(url)
+    if r.status_code >= 400:
+        print("Error code: {}".format(r.status_code))
 
-    except requests.exceptions.HTTPError as e:
-        print("Error code: {}".format(e.response.status_code))
+    else:
+        print(r.text)
