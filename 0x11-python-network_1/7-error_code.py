@@ -10,9 +10,9 @@ if __name__ == "__main__":
     url = sys.argv[1]
 
     try:
-        response = requests.get(url=url)
-        response.raise_for_status()
-        print(response.text)
+        r = requests.get(url=url)
+        r.raise_for_status()
+        print(r.text)
 
     except requests.exceptions.HTTPError as e:
         print("Error code: {}".format(e.response.status_code))
