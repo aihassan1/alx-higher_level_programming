@@ -6,6 +6,5 @@ const fs = require('fs');
 fs.writeFile(path, data, 'utf-8', (err) => {
   if (err) {
     console.error(err);
-    return;
   }
 });
