@@ -3,6 +3,7 @@ const request = require('request');
 const url = process.argv[2];
 const ActorId = 18;
 const TargetLink = `https://swapi-api.alx-tools.com/api/people/${ActorId}/`;
+const TargetLink2 = `https://swapi-api.alx-tools.com/api/people/${ActorId}`;
 
 request(url, (error, response, body) => {
   if (error) {
@@ -15,7 +16,10 @@ request(url, (error, response, body) => {
   let count = 0;
 
   results.forEach((item) => {
-    if (item.characters.includes(TargetLink)) {
+    if (
+      item.characters.includes(TargetLink) ||
+      item.characters.includes(TargetLink)
+    ) {
       count++;
     }
   });
