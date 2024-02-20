@@ -1,18 +1,23 @@
 #!/usr/bin/node
-
 const request = require('request');
-
 const url = process.argv[2];
+const ActorId = 18;
+const TargetLink = `https://swapi-api.alx-tools.com/api/people/${ActorId}/`;
+
 request(url, (error, response, body) => {
-  if (error) { return; }
-  let count = 0;
-  const result = JSON.parse(body).results;
-  for (const movie of result) {
-    for (const character of movie.characters) {
-      if (character.includes('/18/') || character.includes('/18')) {
-        count++;
-      }
-    }
+  if (error) {
+    console.error(error);
+    return;
   }
+  const data = JSON.parse(body);
+  const results = data.results;
+
+  let count = 0;
+
+  results.forEach((item) => {
+    if (item.characters.includes(TargetLink)) {
+      count++;
+    }
+  });
   console.log(count);
 });
