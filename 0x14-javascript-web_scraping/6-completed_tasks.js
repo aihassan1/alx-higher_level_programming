@@ -4,7 +4,7 @@ const request = require('request');
 const url = process.argv[2];
 
 // Function to count the number of completed tasks for a given user ID
-function trueCounter (data, userId) {
+function trueCounter(data, userId) {
   let counter = 0;
   // Loop through each item in the data
   for (const item of data) {
@@ -21,7 +21,7 @@ function trueCounter (data, userId) {
 request(url, (error, response, body) => {
   // Handle errors
   if (error) {
-    console.error('Error:', error);
+    console.error(error);
     return;
   }
 
