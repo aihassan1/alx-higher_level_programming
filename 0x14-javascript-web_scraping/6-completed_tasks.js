@@ -2,10 +2,9 @@
 
 const request = require('request');
 const url = process.argv[2];
-let counter = 0;
 
 // Function to count the number of completed tasks for a given user ID
-function true_counter(data, userid) {
+function trueCounter(data, userid) {
   let counter = 0;
   // Loop through each item in the data
   for (const item of data) {
@@ -28,17 +27,17 @@ request(url, (error, response, body) => {
   // Parse the response body into JSON format
   const body_data = JSON.parse(body);
   // Initialize an empty object to store the results
-  let users_completed_tasks = {};
+  const users_completed_tasks = {};
 
   // Iterate through each item in the response body data
   for (const item of body_data) {
     // Call the true_counter function to count completed tasks for the current user ID
-    let result = true_counter(body_data, item.userId);
+    const result = trueCounter(body_data, item.userId);
 
     // Assign the result to the users_completed_tasks object
     Object.assign(users_completed_tasks, result);
   }
-  
+
   // Output the object containing the count of completed tasks for each user ID
   console.log(users_completed_tasks);
 });
