@@ -21,7 +21,7 @@ function trueCounter (data, userId) {
 request(url, (error, response, body) => {
   // Handle errors
   if (error) {
-    console.error('Error:', error);
+    console.error(error);
     return;
   }
 
